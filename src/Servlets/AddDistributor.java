@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by james on 10/10/2016.
  */
-@WebServlet("/AddDistributor.jsp")
 public class AddDistributor extends HttpServlet {
     private static long serialVersionUID = 1L;
     boolean result = false;

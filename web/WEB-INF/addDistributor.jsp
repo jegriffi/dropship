@@ -5,8 +5,11 @@
   Time: 8:20 AM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ include file="includes/jspheader.jsp"%>
 <html>
 <head>
+    <%@include file="/WEB-INF/includes/htmlhead.jsp" %>
+    <title>Add Distributor</title>
     <style>
         h2 {
             font-weight: bold;
@@ -14,7 +17,7 @@
     </style>
 </head>
 <body>
-    <div clas="container">
+    <div class="container">
         <h2>Add Distributor</h2>
             <form action-="addDistributor" role="form" method="GET">
                 <div class="form-group">
@@ -46,6 +49,7 @@
                     <input type="text" class="form-control" name=urlfeed placeholder="Enter url feed location"
                            value="${urlfeed}">
                 </div>
+                <button type="submit" class="btn btn-default">Submit</button>
             </form>
     </div>
 </body>

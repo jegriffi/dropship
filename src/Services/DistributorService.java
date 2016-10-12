@@ -14,6 +14,15 @@ import java.util.List;
  * Created by james on 9/16/2016.
  */
 public class DistributorService extends Service {
+    public static void main(String[] args) {
+        boolean b = addDistributor("aaname", "a@email.com", "11111111", "www.w.com", "urlfeed");
+        if (b) {
+            System.out.println("yoooo");
+        }
+        else {
+            System.out.println("nooo");
+        }
+    }
     private List<Distributor> distributorList = null;
 
     public List<Distributor> getDistributorList() {
@@ -103,7 +112,7 @@ public class DistributorService extends Service {
         return distributorItems;
     }
 
-    public boolean addDistributor(String name, String email, String phone, String website, String feed_url) {
+    public static boolean addDistributor(String name, String email, String phone, String website, String feed_url) {
         Distributor d = new Distributor(name, email, phone, website, feed_url);
         Service s = new Service();
         Connection conn = s.getSqlConnection();

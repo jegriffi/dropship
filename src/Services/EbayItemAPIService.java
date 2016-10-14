@@ -119,7 +119,6 @@ public class EbayItemAPIService {
 
         //Sets the parent RelistedID
         ItemType newItem = api.getItemToBeRelisted();
-
         newItem.setRelistParentID(Long.parseLong(ebayID));
 
         try {
